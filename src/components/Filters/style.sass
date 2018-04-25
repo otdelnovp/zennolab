@@ -1,0 +1,54 @@
+.filters
+	padding: 4.5rem 0 4rem
+	background: #f5f6f7
+
+	&_list
+		&_item
+			position: relative
+			display: inline-block
+			margin: 0 4rem 0 0
+			line-height: 3rem
+			text-transform: uppercase
+			font-weight: bold
+			overflow: hidden
+			cursor: pointer
+			input[type="checkbox"]
+				position: absolute
+				top: 0
+				left: -5000px
+				opacity: 0
+			span
+				position: relative
+				padding: 0 0 0 3rem
+				&:before
+					content: ''
+					display: block
+					box-sizing: border-box
+					position: absolute
+					top: 50%
+					left: 0
+					transform: translateY(-50%)
+					width: 2.4rem
+					height: 2.4rem
+					border: 2px solid #aa9b77
+					border-radius: 0.3rem
+					cursor: pointer
+				&::after
+					font-family: 'FontAwesome'
+					content: '\f00c'
+					display: block
+					position: absolute
+					top: 50%
+					left: 0
+					transform: translateY(-50%)
+					width: 2.4rem
+					font-size: 1.6rem
+					text-align: center
+					color: #aa9b77
+					opacity: 0
+					transition: opacity 300ms
+			input[type="checkbox"]:checked + span::after
+				opacity: 1
+
+	&_tools
+		text-align: right
